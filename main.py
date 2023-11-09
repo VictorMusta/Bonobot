@@ -3,7 +3,7 @@
 # Press Shift+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
-from discord_main import start
+from start import start
 
 token = "MTE3MjIzMjUwMDExMDY4ODM4Nw.GCHC1D.LJUjYAUXgpp5NFz_0fO83-3lnVSDzG-BTLf4ww"
 
