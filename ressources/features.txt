@@ -1,0 +1,7 @@
+NEW_PROPOSAL !:
+User: AnnBolyn#6085 
+Proposition:Générateur de recettes de pâtisserie
+Envoie une recette de pâtisserie au hasard Donne la liste d'ingrédients nécessaires ainsi que les différentes étapes
+Te demande à la fin si tu as bien tous les ingrédients Si tu n'as pas tout, écris par exemple "beurre" pour signaler l'ingrédient manquant
+Te propose une nouvelle recette sans beurre Générateur de recettes de pâtisserie avec exigences,
+exemple : recette avec citron ; recette avec chocolat ; recette sans gluten ; recette confiture ; recette noël, ....

@@ -1,7 +1,7 @@
 import logging
 
 logger = logging.getLogger(__name__)
-handler = logging.FileHandler(filename='features.log', encoding='utf-8', mode='a')
+handler = logging.FileHandler(filename='ressources/features.txt', encoding='utf-8', mode='a')
 logger.addHandler(handler)
 logger.setLevel(logging.INFO)
 
