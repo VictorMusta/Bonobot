@@ -4,6 +4,12 @@ import discord
 import logging
 from functionality.Compliments.compliments import compliment_user
 from functionality.feature_proposals.propose_feature import propose_feature
+import os
+
+from dotenv import load_dotenv
+
+load_dotenv()  # take environment variables from .env.
+
 
 
 def start(token):
@@ -35,4 +41,4 @@ def start(token):
 
 
 if __name__ == '__main__':
-    start(BOTTOKEN)
+    start(os.environ['BOTTOKEN'])
