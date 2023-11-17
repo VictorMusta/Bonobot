@@ -1,0 +1,5 @@
+    $help
+        *displays this
+    $help <command>
+        *displays help for a specific command example : -"$help recette"
+    $recette
