@@ -5,11 +5,9 @@ import logging
 from functionality.Compliments.compliments import compliment_user
 from functionality.feature_proposals.propose_feature import propose_feature
 import os
-
 from dotenv import load_dotenv
 
 load_dotenv()  # take environment variables from .env.
-
 
 
 def start(token):
@@ -36,7 +34,7 @@ def start(token):
             await propose_feature(message.author, message.content, message.channel)
         if message.author.name in ["musta33", "AnnBolyn"]:
             await compliment_user(message.channel, message.author)
-        # problème todo: le client n'as pas accès à tous les utilisateurs, c'est un problème pour get le dernier message de l'utilisateur.
+        # TODO: faire en sorte que le bot ai accès aux utilisateurs. (que le bot dans client.get_all_users())
     client.run(token, log_handler=handler, log_level=logging.DEBUG)
 
 
