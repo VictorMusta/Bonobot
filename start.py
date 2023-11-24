@@ -1,24 +1,23 @@
-# This example requires the 'message_content' intent.
 
 import discord
 import logging
-from functionality.Compliments.compliments import compliment_user
-from functionality.feature_proposals.propose_feature import propose_feature
 import os
+import calls
 from dotenv import load_dotenv
 
 load_dotenv()  # take environment variables from .env.
 
 
 def start(token):
-
     intents = discord.Intents.default()
     intents.message_content = True
     client = discord.Client(intents=intents)
+
     handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w')
     logger = logging.getLogger("__name__")
     logger.addHandler(handler)
-    # Assume client refers to a discord.Client subclass...
+
+    print('BonoBot in action!')
 
     @client.event
     async def on_ready():
@@ -26,15 +25,7 @@ def start(token):
 
     @client.event
     async def on_message(message):
-        if message.author == client.user:
-            return
-        if message.content.startswith('$help'):
-            await message.channel.send('Liste des commandes:')
-        if message.channel.name == "new_features":
-            await propose_feature(message.author, message.content, message.channel)
-        if message.author.name in ["musta33", "AnnBolyn"]:
-            await compliment_user(message.channel, message.author)
-        # TODO: faire en sorte que le bot ai accès aux utilisateurs. (que le bot dans client.get_all_users())
+        await calls.on_message(client, message)
     client.run(token, log_handler=handler, log_level=logging.DEBUG)
 
 
