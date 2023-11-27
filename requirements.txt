@@ -1,2 +1,5 @@
 discord.py==2.3.2
 python-dotenv==1.0.0
+SQLAlchemy==2.0.23
+discord~=2.3.2
+SQLAlchemy~=2.0.23

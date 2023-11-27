@@ -1,4 +1,4 @@
-from functionality.Compliments.compliments import compliment_user
+from functionality.compliment.compliments import compliment_user
 from functionality.feature_proposals.propose_feature import propose_feature
 from functionality.help.display_help import display_help
 from functionality.help.display_not_implemented_yet import display_not_implemented_yet
