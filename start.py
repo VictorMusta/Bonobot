@@ -2,7 +2,7 @@
 import discord
 import logging
 import os
-import calls
+import routing_calls
 from dotenv import load_dotenv
 
 load_dotenv()  # take environment variables from .env.
@@ -25,7 +25,7 @@ def start(token):
 
     @client.event
     async def on_message(message):
-        await calls.on_message(client, message)
+        await routing_calls.on_message(client, message)
     client.run(token, log_handler=handler, log_level=logging.DEBUG)
 
 
