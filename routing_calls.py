@@ -35,7 +35,7 @@ async def on_message(client: Client, message):
     if message.content.startswith("$recette"):
         await display_not_implemented_yet(message.channel)
 
-    if message.author.name in ["AnnBolyn", "$waggLord", "Ashino", "mameloukk", "musta33"]:
+    if message.author.name in ["AnnBolyn", "$waggLord", "Ashino", "mameloukk"]:
         await compliment_user(message.channel, message.author)
 
     # TODO: faire en sorte que le bot ai accès aux utilisateurs. (que le bot dans client.get_all_users())
