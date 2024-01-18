@@ -13,15 +13,15 @@ def start(token):
     intents.message_content = True
     client = discord.Client(intents=intents)
 
-    handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w')
+    handler = logging.FileHandler(filename="discord.log", encoding="utf-8", mode="w")
     logger = logging.getLogger("__name__")
     logger.addHandler(handler)
 
-    print('BonoBot in action!')
+    print("BonoBot in action!")
 
     @client.event
     async def on_ready():
-        print(f'We have logged in as {client.user}')
+        print(f"We have logged in as {client.user}")
 
     @client.event
     async def on_message(message):
@@ -29,5 +29,5 @@ def start(token):
     client.run(token, log_handler=handler, log_level=logging.DEBUG)
 
 
-if __name__ == '__main__':
-    start(os.environ['BOTTOKEN'])
+if __name__ == "__main__":
+    start(os.environ["BOTTOKEN"])

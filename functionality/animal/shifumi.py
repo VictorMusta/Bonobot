@@ -1,11 +1,14 @@
 from random import randint
 import time
+
 data = {"1": "pierre", "2": "feuille", "3": "ciseaux"}
 
 
 def shifumi_menu():
     print("Bienvenu dans mon jeu shifumi!")
-    print("chaque round tu vas te battre contre moi, tu vas devoir choisir entre 'pierre', 'feuille' et 'ciseaux'.")
+    print(
+        "chaque round tu vas te battre contre moi, tu vas devoir choisir entre 'pierre', 'feuille' et 'ciseaux'."
+    )
     print("Bonne chance! :)")
     play_round()
 
@@ -16,8 +19,8 @@ def play_round():
     for choice in data.keys():
         print(choice)
         time.sleep(0.5)
-    print("TU AS FAIS :"+human_choice)
-    print("J\'AI FAIS :"+computer_choice)
+    print("TU AS FAIS :" + human_choice)
+    print("J'AI FAIS :" + computer_choice)
     if human_choice == "pierre":
         if computer_choice == "feuille":
             loose()
@@ -58,5 +61,5 @@ def win():
     exit()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     shifumi_menu()

@@ -7,24 +7,25 @@ from functionality.help.display_help import display_help
 from functionality.help.display_not_implemented_yet import display_not_implemented_yet
 from sqlalchemy import create_engine
 
-engine = create_engine("mysql+mysqlconnector://u39524_cFA7dtFzsk:QNMlWSPg8!Af!SIQTxXiNC63@161.97.78.70:3306/s39524_BonoBot")
+engine = create_engine(
+    "mysql+mysqlconnector://u39524_cFA7dtFzsk:QNMlWSPg8!Af!SIQTxXiNC63@161.97.78.70:3306/s39524_BonoBot"
+)
 
 
 async def on_message(client: Client, message):
-
     if message.author == client.user:
         return
 
-    if message.content.startswith('$ping'):
+    if message.content.startswith("$ping"):
         await message.channel.send("PONG!")
 
     if message.channel.name == "magasin":
         await handle_animal_shop_channel(engine, message)
 
-    if message.content.startswith('$help'):
+    if message.content.startswith("$help"):
         await display_help(message)
 
-    if message.content.startswith('$recette'):
+    if message.content.startswith("$recette"):
         await display_not_implemented_yet(message.channel)
 
     if message.channel.name == "new_features":

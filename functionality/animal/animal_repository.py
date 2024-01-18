@@ -2,7 +2,6 @@ from discord import Client
 
 
 async def handle_animal_shop_channel(engine, message):
-
     text_from_player = str(message.content).lower()
 
     if text_from_player.startswith("bonjour"):
@@ -39,4 +38,3 @@ async def display_shop_help(message):
     answer += "Voici la liste des commandes disponibles dans mon magasin:\n"
     answer += "'Montre moi ton stock' : Montre les objets que j'ai en stock\n"
     await message.channel.send(answer)
-
